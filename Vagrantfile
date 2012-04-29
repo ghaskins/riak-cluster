@@ -1,6 +1,6 @@
 Vagrant::Config.run do |all_config|
   all_config.vm.define :riak1 do |config|
-    config.vm.box = "oneiric32"
+    config.vm.box = "lucid64"
     config.vm.forward_port 8069, 8069
     config.vm.forward_port 8098, 8098
     config.vm.forward_port 8087, 8087
@@ -13,7 +13,7 @@ Vagrant::Config.run do |all_config|
     end
   end
   all_config.vm.define :riak2 do |config|
-    config.vm.box = "oneiric32"
+    config.vm.box = "lucid64"
     config.vm.network :hostonly, "33.33.33.11"
     config.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "cookbooks"
@@ -23,7 +23,7 @@ Vagrant::Config.run do |all_config|
     end
   end
   all_config.vm.define :riak3 do |config|
-    config.vm.box = "oneiric32"
+    config.vm.box = "lucid64"
     config.vm.network :hostonly, "33.33.33.12"
     config.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "cookbooks"
