@@ -13,6 +13,9 @@ override_attributes(
       "pb_port" => 8087,
       "storage_backend" => :riak_kv_eleveldb_backend
     },
+    "search" => {
+      "enabled" => true
+    },
     "control" => {
       "enabled" => true
     }
