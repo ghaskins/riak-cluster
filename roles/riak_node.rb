@@ -6,6 +6,11 @@ run_list(
 override_attributes(
   "riak" => {
     "core" => {
+      "ssl" => { 
+	 "certfile" => "./etc/cert.pem",
+	 "keyfile" => "./etc/key.pem"
+	 },
+      "https" => [ [ "0.0.0.0", 8069 ] ],
       "http" => [ [ "0.0.0.0", 8098 ] ]
     },
     "kv" => {
